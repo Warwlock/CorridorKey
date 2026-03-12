@@ -519,7 +519,7 @@ def interactive_wizard(win_path: str, device: str | None = None) -> None:
             idx = IntPrompt.ask("Select Model ID", default=1)
             try:
                 selected_usage = usage_list[idx - 1]
-                dilate = IntPrompt.ask("Enter dilation radius (0-50)", default=0)
+                dilate = IntPrompt.ask("Enter dilation/erosion radius (-50 to 50, 0 to skip)", default=0)
 
                 console.print(f"Starting BiRefNet ({selected_usage}, Radius={dilate}) for {len(raw)} clips...")
                 if Confirm.ask(f"Proceed with {selected_usage}?", default=True):

@@ -295,7 +295,7 @@ def run_birefnet(
     clips,
     device=None,
     usage="General",
-    dilate_radius=10,
+    dilate_radius=0,
     *,
     on_clip_start: Callable[[str, int], None] | None = None,
     on_frame_complete: Callable[[int, int], None] | None = None,
